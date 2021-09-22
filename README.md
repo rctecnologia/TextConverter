@@ -1,6 +1,6 @@
-# Conversor de Texto
+# Text Converter :pencil:
 
-* Para Maiúsculo
-* Para Minúsculo
-* Propper Case
-* Sentence Case
+* To UpperCase
+* To LowerCase
+* To PropperCase
+* To SentenceCase
