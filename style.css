@@ -1,3 +1,7 @@
+.content{
+    justify-content: center;
+}
+
 body{
     background-color: darkslategray;
 }
@@ -12,6 +16,8 @@ button{
     border: 0;
     padding: 15px;
     color: white;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 textarea{
@@ -20,4 +26,6 @@ textarea{
     height: 400px;
     resize: none;
     font-style: italic;
+    border-radius: 10px;
+    
 }
