@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body>
+<div class="content">
+    <div class="title">
+        <h1> Case Converter </h1>
+    </div>
+    <textarea></textarea>
+
+    <br>
+    <button id="upper-case" onclick="toUpper()">Upper Case</button>
+    <button id="lower-case" onclick="toLower()">Lower Case</button>
+    <button id="propper-case" onclick="toPropper()">Propper Case</button>
+    <button id="sentence-case" onclick="toSentence()">Sentence Case</button>
+    <button id="save-text-file" onclick="download()"> Save Text File</button>
+
+    <script>
+        function toUpper() {
+            let element = document.querySelector("textarea").value;
+            element = element.toUpperCase();
+            document.querySelector("textarea").value = element;
+        }
+
+        function toLower() {
+            let element = document.querySelector("textarea").value;
+            element = element.toLowerCase();
+            document.querySelector("textarea").value = element;
+        }
+
+        function toPropper() {
+            let element = document.querySelector("textarea").value;
+            element = element.toUpperCase();
+            document.querySelector("textarea").value = element;
+        }
+
+        function toSentence() {
+            let element = document.querySelector("textarea").value;
+            element = element.toLowerCase();
+                        array = element.split(". ");
+            let tam = array.length;
+            for (let i = 0; i < tam; i++) {
+                let str = array[i];
+                let str1 = str[0].toUpperCase();
+                let str2 = str.substr(1)
+                array[i] = str1 + str2;
+            }
+            element = array.join(". ");
+            console.log(array);
+            document.querySelector("textarea").value = element;
+        }
+        function download(filename, text) {
+            var element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(document.querySelector("textarea").value));
+            element.setAttribute('download', "text");
+
+            element.style.display = 'none';
+            document.body.appendChild(element);
+
+            element.click();
+
+            document.body.removeChild(element);
+
+        }
+
+        // Start file download.
+       // download("hello.txt",document.querySelector("textarea").value);
+    </script>
+</div>
+</body>
+</html>
