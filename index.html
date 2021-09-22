@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="content">
@@ -41,7 +41,7 @@
         function toSentence() {
             let element = document.querySelector("textarea").value;
             element = element.toLowerCase();
-                        array = element.split(". ");
+            array = element.split(". ");
             let tam = array.length;
             for (let i = 0; i < tam; i++) {
                 let str = array[i];
@@ -53,6 +53,7 @@
             console.log(array);
             document.querySelector("textarea").value = element;
         }
+
         function download(filename, text) {
             var element = document.createElement('a');
             element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(document.querySelector("textarea").value));
@@ -67,8 +68,6 @@
 
         }
 
-        // Start file download.
-       // download("hello.txt",document.querySelector("textarea").value);
     </script>
 </div>
 </body>

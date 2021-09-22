@@ -1,0 +1,23 @@
+body{
+    background-color: darkslategray;
+}
+
+h1{
+    color: orangered;
+    font-family: sans-serif;
+}
+
+button{
+    background-color: orangered;
+    border: 0;
+    padding: 15px;
+    color: white;
+}
+
+textarea{
+    margin: 10px;
+    width: 550px;
+    height: 400px;
+    resize: none;
+    font-style: italic;
+}
